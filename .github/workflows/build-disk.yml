@@ -10,6 +10,7 @@ on:
         default: false
         type: boolean
       platform:
+        description: "Platform to build for"
         required: true
         type: choice
         options:
