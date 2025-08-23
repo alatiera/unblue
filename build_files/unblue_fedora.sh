@@ -40,13 +40,6 @@ flatpak mask \
     org.kde.WaylandDecoration.QAdwaitaDecorations \
     org.kde.WaylandDecoration.QGnomePlatform-decoration
 
-# remove fedora flatpaks
-# flatpak remove -y $(flatpak list  --system --columns=application)
-# flatpak remote-delete fedora-flatpak
-
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install -y flathub $(cat /ctx/system_flatpaks.txt)
-
 dnf5 install -y sysprof-cli sysprof-agent sysprof
 
 # FIXME: Inter font
