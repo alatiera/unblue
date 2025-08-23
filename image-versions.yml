@@ -1,0 +1,5 @@
+images:
+  - name: centos-bootc
+    image: ghcr.io/ublue-os/silverblue-main
+    tag: latest
+    digest: sha256:9cf8409b59f95ba4bea219e34395fde0d3f11d4c2abd3cdd675225472d1fb041
