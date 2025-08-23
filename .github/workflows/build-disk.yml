@@ -16,6 +16,11 @@ on:
         options:
           - amd64
           - arm64
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**/README.md'
   pull_request:
     branches:
       - main
