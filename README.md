@@ -6,6 +6,8 @@ Silverblue without the blue.
 
 Unblue aims provide the Fedora Community with a faithful representation of GNOME that stays as close to the original design as possible vision as possible. It removes tweaks, modifications, overrides and extensions that Fedora adds. Additionally the only provides source for Applications is [Flathub](https://flathub.org/).
 
+![Unblue Welcome](unblue-tour.png)
+
 Download and ISO here.
 
 Or Rebase from an existing Silverblue installation!
