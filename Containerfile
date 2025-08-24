@@ -5,6 +5,10 @@ COPY build_files /
 # Base Image
 FROM ghcr.io/ublue-os/silverblue-main:latest
 
+ARG IMAGE_NAME="${IMAGE_NAME:-unblue}"
+ARG IMAGE_REGISTRY="${IMAGE_REGISTRY:-ghcr.io/alatiera}"
+ARG IMAGE_TAG="${IMAGE_TAG:-latest}"
+
 ### MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.

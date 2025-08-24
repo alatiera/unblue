@@ -18,3 +18,14 @@ bash /ctx/unblue_fedora.sh
 install -Dm0644 -t /usr/lib /ctx/os-release
 # VERSION="${VERSION:-00.00000000}"
 # echo "OSTREE_VERSION=\"${VERSION}"\" >>/usr/lib/os-release
+IMAGE_INFO="/usr/share/ublue-os/image-info.json"
+IMAGE_REF="ostree-image-signed:docker://$IMAGE_REGISTRY/$IMAGE_NAME"
+
+cat >$IMAGE_INFO <<EOF
+{
+  "image-name": "$IMAGE_NAME",
+  "image-registry": "$IMAGE_REGISTRY",
+  "image-ref": "$IMAGE_REF",
+  "image-tag":"$IMAGE_TAG",
+}
+EOF
