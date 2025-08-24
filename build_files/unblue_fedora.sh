@@ -42,15 +42,12 @@ flatpak mask \
 
 dnf5 install -y sysprof-cli sysprof-agent sysprof
 
-# FIXME: Inter font
-
 # FIXME: rebuild nautilus without the ptyxis patch
 
 # Remove gnome-tour fedora logo
 # Fuck this copr is unworkable, I am not spending a minute more on this dumpster fire
 # will just replace the gresources file instead
 install -Dm644 /ctx/gnome-tour.resources.gresource "/usr/share/gnome-tour/resources.gresource"
-
 
 # Use upstream mime apps from gnome-session
 # and make sure we have epiphany->firefox and console->ptyxis
