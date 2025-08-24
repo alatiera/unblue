@@ -1,7 +1,8 @@
 NAME="Unblue"
 VERSION="42"
 RELEASE_TYPE=stable
-ID=fedora
+ID=unblue
+ID_LIKE=fedora
 VERSION_ID=42
 PRETTY_NAME="Unblue 42"
 ANSI_COLOR="0;38;2;60;110;180"
@@ -10,3 +11,5 @@ HOME_URL="https://github.com/alatiera/unblue"
 BUG_REPORT_URL="https://github.com/alatiera/unblue/issues"
 VARIANT="Unblue"
 VARIANT_ID=unblue
+IMAGE_LIKE="fedora"
+IMAGE_PRETTY_NAME="Unblue"

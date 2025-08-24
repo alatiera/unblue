@@ -29,3 +29,6 @@ cat >$IMAGE_INFO <<EOF
   "image-tag": "$IMAGE_TAG"
 }
 EOF
+
+# Fix issues caused by ID no longer being fedora
+sed -i "s|^EFIDIR=.*|EFIDIR=\"fedora\"|" /usr/sbin/grub2-switch-to-blscfg

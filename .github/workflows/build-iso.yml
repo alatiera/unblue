@@ -22,6 +22,7 @@ on:
   pull_request:
     paths:
       - ".github/workflows/build-iso.yml"
+      - "anaconda_config/configure_iso_anaconda.sh"
 
 env:
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"
@@ -100,6 +101,7 @@ jobs:
         with:
           image-ref: ${{ steps.image_ref.outputs.image_ref }}:${{ matrix.image_version }}
           flatpaks-list: ${{ github.workspace }}/build_files/system_flatpaks.txt
+          hook-post-rootfs: ${{github.workspace}}/anaconda_config/configure_iso_anaconda.sh
           kargs: ${{ steps.image_ref.outputs.kargs }}
           builder-distro: 'fedora'
 
@@ -118,7 +120,7 @@ jobs:
           echo "output_directory=$OUTPUT_DIRECTORY" >> "${GITHUB_OUTPUT}"
 
       - name: Upload to Job Artifacts
-        if: github.ref_name == 'testing' || (github.event_name == 'workflow_dispatch' && github.event.inputs.upload_artifacts)
+        if: github.ref_name == 'main' || (github.event_name == 'workflow_dispatch' && github.event.inputs.upload_artifacts) || github.event_name != 'pull_request'
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: ${{ steps.image_ref.outputs.artifact_format }}
