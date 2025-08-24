@@ -26,6 +26,6 @@ cat >$IMAGE_INFO <<EOF
   "image-name": "$IMAGE_NAME",
   "image-registry": "$IMAGE_REGISTRY",
   "image-ref": "$IMAGE_REF",
-  "image-tag":"$IMAGE_TAG",
+  "image-tag": "$IMAGE_TAG"
 }
 EOF
