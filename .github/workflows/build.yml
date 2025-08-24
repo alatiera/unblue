@@ -63,7 +63,7 @@ jobs:
           # Lowercase the image uri
           echo "IMAGE_REGISTRY=${IMAGE_REGISTRY,,}" >> ${GITHUB_ENV}
           echo "IMAGE_NAME=${IMAGE_NAME,,}" >> ${GITHUB_ENV}
-          echo "IMAGE_TAG=${DEFAULT_TAG,,}".{{date 'YYYYMMDD'}} >> ${GITHUB_ENV}
+          echo "IMAGE_TAG=${DEFAULT_TAG,,}" >> ${GITHUB_ENV}
 
       # Image metadata for https://artifacthub.io/ - This is optional but is highly recommended so we all can get a index of all the custom images
       # The metadata by itself is not going to do anything, you choose if you want your image to be on ArtifactHub or not.
@@ -112,7 +112,7 @@ jobs:
           build-args: |
             IMAGE_NAME=${{ env.IMAGE_NAME }}
             IMAGE_REGISTRY=${{ env.IMAGE_REGISTRY }}
-            IMAGE_TAG=${{ env.DEFAULT_TAG }}.{{date 'YYYYMMDD'}}
+            IMAGE_TAG=${{ env.DEFAULT_TAG }}
           oci: false
 
       # Rechunk is a script that we use on Universal Blue to make sure there isnt a single huge layer when your image gets published.
