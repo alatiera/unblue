@@ -97,15 +97,18 @@ EOF
 . /etc/os-release
 echo "Unblue release $VERSION_ID" >/etc/system-release
 sed -i 's/ANACONDA_PRODUCTVERSION=.*/ANACONDA_PRODUCTVERSION=""/' /usr/{,s}bin/liveinst || true
-sed -i 's|^Icon=.*|Icon=/usr/share/pixmaps/fedora-logo-icon.png|' /usr/share/applications/liveinst.desktop || true
 sed -i 's| Fedora| Unblue|' /usr/share/anaconda/gnome/fedora-welcome || true
-sed -i 's|Activities|in the dock|' /usr/share/anaconda/gnome/fedora-welcome || true
 
-# Get Artwork
-# git clone --depth=1 https://github.com/ublue-os/packages.git /root/packages
-# mkdir -p /usr/share/anaconda/pixmaps/silverblue
-# cp -r /root/packages/unblue/fedora-logos/src/anaconda/* /usr/share/anaconda/pixmaps/silverblue/
-# rm -rf /root/packages
+# Replace logos
+install -Dm644 /usr/share/pixmaps/gnome_brandmark.png "/usr/share/pixmaps/fedora-logo-small.png"
+install -Dm644 /usr/share/pixmaps/gnome_brandmark.png "/usr/share/pixmaps/fedora-logo.png"
+install -Dm644 /usr/share/pixmaps/gnome_brandmark.svg "/usr/share/pixmaps/fedora-logo-sprite.svg"
+install -Dm644 /usr/share/pixmaps/gnome_brandmark.png "/usr/share/anaconda/pixmaps/silverblue/sidebar-logo.png"
+install -Dm644 /usr/share/pixmaps/gnome-boot-logo.png "/usr/share/plymouth/themes/spinner/watermark.png"
+
+sed -i 's|^Icon=.*|Icon=/usr/share/icons/hicolor/scalable/apps/org.gnome.Installer.svg|' /usr/share/applications/liveinst.desktop
+sed -i 's|fedora-logo-icon|gnome-logo-icon|' /usr/share/anaconda/gnome/fedora-welcome
+sed -i 's|fedora-logo-icon|org.gnome.Installer|' /usr/share/anaconda/gnome/org.fedoraproject.welcome-screen.desktop
 
 # Interactive Kickstart
 tee -a /usr/share/anaconda/interactive-defaults.ks <<EOF
