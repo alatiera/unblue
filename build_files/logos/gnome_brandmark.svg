@@ -5,11 +5,33 @@
    viewBox="0 0 300 300"
    height="300"
    width="300"
+   sodipodi:docname="gnome_brandmark.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.94280904"
+     inkscape:cx="75.306872"
+     inkscape:cy="107.12668"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
   <defs
      id="defs2" />
   <metadata
@@ -42,19 +64,14 @@
   </metadata>
   <g
      id="layer1"
-     transform="translate(-2240)">
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
-       id="rect9865"
-       width="300"
-       height="300"
-       x="2240"
-       y="0" />
+     transform="translate(-2240)"
+     style="display:inline">
     <g
        transform="matrix(0.4436889,0,0,0.4436889,2965.7337,-7.469143)"
        id="g2041"
-       style="fill:#ffffff;stroke-width:2.25383"
-       class="logofill">
+       style="display:inline;fill:#ffffff;stroke-width:2.25383"
+       class="logofill"
+       inkscape:label="g2041">
       <g
          transform="matrix(3.6654483,0,0,3.6654483,-775.24519,138.17095)"
          style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.79233;stroke-miterlimit:4"
@@ -110,7 +127,8 @@
           <path
              d="m 58.791,93.913 c 1.107,8.454 -6.202,12.629 -13.36,7.179 C 22.644,83.743 83.16,75.088 79.171,51.386 75.86,31.712 15.495,37.769 8.621,68.553 3.968,89.374 27.774,118.26 52.614,118.26 c 12.22,0 26.315,-11.034 28.952,-25.012 C 83.58,82.589 57.867,86.86 58.791,93.913 Z"
              style="fill:#241f31;fill-opacity:1;stroke-width:1.79233"
-             id="path2051" />
+             id="path2051"
+             inkscape:label="path2051" />
         </g>
       </g>
     </g>
