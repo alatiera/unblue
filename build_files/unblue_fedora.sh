@@ -55,11 +55,24 @@ install -Dm644 /ctx/gnome-tour.resources.gresource "/usr/share/gnome-tour/resour
 curl -L -o mimeapps.list https://gitlab.gnome.org/GNOME/gnome-session/-/raw/main/data/gnome-mimeapps.list
 install -Dm0644 -t /usr/share/applications/ mimeapps.list
 
-# Change plymouth logo
-curl -L -o plymouthd.defaults https://gitlab.gnome.org/GNOME/gnome-build-meta/-/raw/master/files/plymouth/plymouthd.defaults
-curl -L -o gnome-boot-logo.png https://gitlab.gnome.org/GNOME/gnome-build-meta/-/raw/master/files/plymouth/gnome-boot-logo.png
-install -Dm644 -t "/usr/share/pixmaps" gnome-boot-logo.png
+# Install logos
+install -Dm644 -t "/usr/share/pixmaps" /ctx/logos/gnome-boot-logo.png
+install -Dm644 -t "/usr/share/pixmaps" /ctx/logos/gnome_brandmark.png
+install -Dm644 -t "/usr/share/pixmaps" /ctx/logos/gnome_brandmark.svg
+install -Dm644 /ctx/logos/gnome_brandmark.png "/usr/share/pixmaps/fedora-logo-small.png"
+install -Dm644 /ctx/logos/gnome_brandmark.png "/usr/share/pixmaps/fedora-logo.png"
+install -Dm644 /ctx/logos/gnome_brandmark.svg "/usr/share/pixmaps/fedora-logo-sprite.svg"
+
+install -Dm644 /ctx/logos/gnome-boot-logo.png "/usr/share/plymouth/themes/spinner/watermark.png"
+# Change plymouth settings
+# curl -L -o plymouthd.defaults https://gitlab.gnome.org/GNOME/gnome-build-meta/-/raw/master/files/plymouth/plymouthd.defaults
+cat >plymouthd.defaults <<EOF
+[Daemon]
+Theme=bgrt
+ShowDelay=0
+DeviceTimeout=8
+EOF
 install -Dm644 plymouthd.defaults "/usr/share/plymouth/plymouthd.defaults"
-install -Dm644 gnome-boot-logo.png "/usr/share/plymouth/themes/spinner/watermark.png"
+
 # regen initramfs
 bash /ctx/initramfs.sh
