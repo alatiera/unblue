@@ -64,6 +64,10 @@ install -Dm644 /ctx/logos/gnome_brandmark.png "/usr/share/pixmaps/fedora-logo.pn
 install -Dm644 /ctx/logos/gnome_brandmark.svg "/usr/share/pixmaps/fedora-logo-sprite.svg"
 install -Dm644 /ctx/logos/gnome_brandmark.svg "/usr/share/icons/hicolor/scalable/apps/gnome-logo-icon.svg"
 install -Dm644 /ctx/logos/org.gnome.Installer.svg "/usr/share/icons/hicolor/scalable/apps/org.gnome.Installer.svg"
+install -Dm644 /ctx/logos/adwaita-triangles.svg "/usr/share/icons/hicolor/scalable/apps/adwaita-triangles.svg"
+install -Dm644 /ctx/logos/adwaita-triangles.png "/usr/share/icons/hicolor/512x512/apps/adwaita-triangles.png"
+install -Dm644 -t "/usr/share/pixmaps" /ctx/logos/ctx/logos/adwaita-triangles.png
+install -Dm644 -t "/usr/share/pixmaps" /ctx/logos/ctx/logos/adwaita-triangles.svg
 gtk-update-icon-cache --quiet /usr/share/icons/hicolor/
 
 install -Dm644 /ctx/logos/gnome-boot-logo.png "/usr/share/plymouth/themes/spinner/watermark.png"
