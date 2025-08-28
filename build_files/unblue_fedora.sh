@@ -57,12 +57,9 @@ install -Dm0644 -t /usr/share/applications/ mimeapps.list
 
 # Install logos
 install -Dm644 -t "/usr/share/pixmaps" /ctx/logos/gnome-boot-logo.png
-install -Dm644 -t "/usr/share/pixmaps" /ctx/logos/gnome_brandmark.png
-install -Dm644 -t "/usr/share/pixmaps" /ctx/logos/gnome_brandmark.svg
-install -Dm644 /ctx/logos/gnome_brandmark.png "/usr/share/pixmaps/fedora-logo-small.png"
-install -Dm644 /ctx/logos/gnome_brandmark.png "/usr/share/pixmaps/fedora-logo.png"
-install -Dm644 /ctx/logos/gnome_brandmark.svg "/usr/share/pixmaps/fedora-logo-sprite.svg"
-install -Dm644 /ctx/logos/gnome_brandmark.svg "/usr/share/icons/hicolor/scalable/apps/gnome-logo-icon.svg"
+install -Dm644 /ctx/logos/adwaita-triangles.png "/usr/share/pixmaps/fedora-logo-small.png"
+install -Dm644 /ctx/logos/adwaita-triangles.png "/usr/share/pixmaps/fedora-logo.png"
+install -Dm644 /ctx/logos/adwaita-triangles.svg "/usr/share/pixmaps/fedora-logo-sprite.svg"
 install -Dm644 /ctx/logos/org.gnome.Installer.svg "/usr/share/icons/hicolor/scalable/apps/org.gnome.Installer.svg"
 install -Dm644 /ctx/logos/adwaita-triangles.svg "/usr/share/icons/hicolor/scalable/apps/adwaita-triangles.svg"
 install -Dm644 /ctx/logos/adwaita-triangles.png "/usr/share/icons/hicolor/512x512/apps/adwaita-triangles.png"
