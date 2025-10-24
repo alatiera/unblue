@@ -16,6 +16,7 @@ org.gnome.Maps
 org.gnome.Music
 org.gnome.NautilusPreviewer
 org.gnome.Papers
+org.gnome.Showtime
 org.gnome.SimpleScan
 org.gnome.Snapshot
 org.gnome.TextEditor
